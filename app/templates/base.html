@@ -1,0 +1,15 @@
+<html>
+	<head>
+		{% if title %}
+		<title>{{title}} - Image Classifier</title>
+		{% else %}
+		<title> Image Classifier </title>
+		{% endif %}
+	</head>
+	<body>
+		<div><a href='/index'>Home</a><div>
+		<hr>
+		{% block content %}{% endblock %}
+	</body>
+</html>
+

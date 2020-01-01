@@ -1,0 +1,1 @@
+FLASK_APP=image_classifier.py
