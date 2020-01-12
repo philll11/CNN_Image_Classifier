@@ -1,21 +1,20 @@
-from flask import request, redirect, render_template
+from flask import request, render_template
 from app import app
 
 import io
-from fastai.vision import (
-	open_image,
-	load_learner
-	)
-from fastai.torch_core import defaults
+from fastai.vision import open_image, load_learner
+from fastai.torch_core import defaults, Path
 import torch
+
+
+PATH = Path(__file__).parent
 
 def config_model():
     defaults.device = torch.device('cpu')
-    model = load_learner('C:/Users/lennyphilips/Documents/image_classifier/app')
+    model = load_learner(PATH/'models')
     return model
 
-@app.route('/')
-@app.route('/index', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def index():
 
 	if request.method == 'POST':
@@ -33,7 +32,6 @@ def index():
 			
 			#classes = [x for x in zip(model.data.classes, prob.tolist())]
 			
-			#print()
 			
 			return render_template('result.html', 
 				result=str(pred_class), 
@@ -42,5 +40,8 @@ def index():
 			)
 			#return redirect(request.url)
 	return render_template('index.html')
-	
+
+
+if __name__ == '__main__':
+      app.run(host='0.0.0.0', port=5000)
 
