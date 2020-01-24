@@ -2,9 +2,15 @@
 
 {% block content %}
 <form action "/upload-image" method="POST" enctype="multipart/form-data">
-	<div>Select image to upload:</div>
+	<h1>Bear Classifier</h1>
+	<div>This simple web app will take an image of a grizzly bear, black bear, and a teddy bear and classify which family of bear it belongs to.</div><br>
+	<div>
+		It uses a Convolutional Neural Network with a Resnet34 layer architechure. 
+		<br>It was only trained on 600 images as it leverages the ImageNet library, allowing for fast, low volume training. 
+		<br>Tho it is a Neural Network, it does not require a GPU to run and therefore runs using the pytorch CPU distribution.
+	</div><br>
+	<div>Upload a bear picture:</div>
 	<input type="file" name="image">
 	<button type="submit">Upload Image</button>
 </form>
-
 {% endblock %}
