@@ -4,7 +4,7 @@
 
 {% if result %}
 <div>The image uploaded has been classified as a:</div>
-<div><b>{{ result }} bear</b></div><br>
+<div><b>{{ result }}</b></div><br>
 	{% if likeliness %}
 	<div>The likeliness percentages are listed below:</div><br>
 	{% for class, percent in classes| zip(likeliness) %}

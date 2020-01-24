@@ -1,16 +1,32 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<form action "/upload-image" method="POST" enctype="multipart/form-data">
-	<h1>Bear Classifier</h1>
-	<div>This simple web app will take an image of a grizzly bear, black bear, and a teddy bear and classify which family of bear it belongs to.</div><br>
-	<div>
-		It uses a Convolutional Neural Network with a Resnet34 layer architechure. 
-		<br>It was only trained on 600 images as it leverages the ImageNet library, allowing for fast, low volume training. 
-		<br>Tho it is a Neural Network, it does not require a GPU to run and therefore runs using the pytorch CPU distribution.
-	</div><br>
-	<div>Upload a bear picture:</div>
-	<input type="file" name="image">
-	<button type="submit">Upload Image</button>
-</form>
+<div>
+	<form action "/upload-image" method="POST" enctype="multipart/form-data">
+		<h1>Bear Classifier</h1>
+		<div>This simple web app will take an image of a grizzly bear, black bear, and a teddy bear and classify which family of bear it belongs to.</div><br>
+		<div>
+			It uses a Convolutional Neural Network with a Resnet34 layer architechure. 
+			<br>It was only trained on 600 images as it leverages the ImageNet library, allowing for fast, low volume training. 
+			<br>Tho it is a Neural Network, it does not require a GPU to run and therefore runs using the pytorch CPU distribution.
+		</div><br>
+		
+		<div id="uploadForm">
+			<div>Upload a bear picture:</div>
+			<div class="form-lements">
+				<div class="fileUpload btn btn-primary">
+					<span>Upload</span>
+					<input type="file" class="custom-file-input" id="custom-file-input" name="image" multiple="false" accept="image/*" onchange="upload(event)">
+				</div>
+			</div>
+			<div class="form-elements"><img id="upload-image"></div>
+			<div class="form-elements"><p id="image-name"></p></div>
+			<div class="form-elements">
+				<button class="fileUpload btn btn-primary" type="submit">Analyse Image</button>
+			</div>
+		</div>
+		
+	</form>
+</div>
+<script type="text/javascript" src="{{ url_for('static', filename='scripts/js_lib.js') }}"></script>
 {% endblock %}
