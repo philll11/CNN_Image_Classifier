@@ -1,24 +1,6 @@
-#uploadForm {
-}
-
 .formElements {
 	display: block;
 }
-
-/*
-.btn {
-color: #fff !important;
-text-transform: uppercase;
-text-decoration: none;
-background: #ed3330;
-padding: 10px;
-border-radius: 5px;
-display: inline-block;
-border: none;
-}
-
-
-*/
 
 .fileUpload {
     position: relative;

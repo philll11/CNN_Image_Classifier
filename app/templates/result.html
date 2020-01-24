@@ -1,14 +1,19 @@
+{% macro capitalize(text) %}
+    {{ text[0]|upper}}{{text[1:] }}
+{% endmacro %}
+
 {% extends 'base.html' %}
 
 {% block content %}
 
 {% if result %}
-<div>The image uploaded has been classified as a:</div>
-<div><b>{{ result }}</b></div><br>
+<h1>Classification Results</h1>
+<p>The image you uploaded looks most like a:</p>
+<p><b>{{ capitalize(result) }}</b></p><br>
 	{% if likeliness %}
-	<div>The likeliness percentages are listed below:</div><br>
+	<p>The likeliness percentages are listed below:</p><br>
 	{% for class, percent in classes| zip(likeliness) %}
-	<div>{{ class }}: {{ percent*100 }}&#x00025;</div>
+	<p class="class-percentages">{{ capitalize(class) }}: {{ (percent*100)|round(2) }}&#x00025;</p>
 	{% endfor %}
 	{% endif %}
 {% endif %}

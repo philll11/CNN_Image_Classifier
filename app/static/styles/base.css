@@ -1,6 +1,77 @@
 body {
-    margin: 20px;
+    margin: 0 !important;
+    padding: 0 !important;
     width: auto;
 	text-align: center;
     font: 14px/1.5em "Lucida Grande",Arial,sans-serif;
+	background-color: #1c2329;
+}
+h1 { color: #ffffff; font-family: 'Lato', sans-serif; font-size: 54px; font-weight: 300; line-height: 58px; margin: 0 0 58px; }
+
+
+p { color: #adb7bd; font-family: 'Lucida Sans', Arial, sans-serif; font-size: 16px; line-height: 26px; text-indent: 30px; margin: 0; }
+
+
+a { color: #fe921f; text-decoration: underline; }
+
+
+a:hover { color: #ffffff }
+
+
+
+
+hr {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a,
+#cssmenu #menu-button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#cssmenu:after,
+#cssmenu>ul:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+#cssmenu #menu-button {
+  display: none;
+}
+#cssmenu {
+  font-family: Montserrat, sans-serif;
+  background: #333333;
+}
+#cssmenu>ul>li>a {
+  padding: 17px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #dddddd;
+  font-weight: 700;
+  text-transform: uppercase;
+  -webkit-transition: color .25s ease;
+  -moz-transition: color .25s ease;
+  transition: color .25s ease;
+}
+#cssmenu>ul>li:hover>a {
+  color: #ffffff;
+}
+#cssmenu>ul>li.has-sub>a {
+  padding-right: 30px;
 }

@@ -4,17 +4,35 @@
 		<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
 	
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/base.css') }}">
-		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/index.css') }}">	
-			
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/index.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/result.css') }}">	
 		
-		{% if title %}
-		<title>{{title}} - Image Classifier</title>
-		{% else %}
-		<title> Image Classifier </title>
-		{% endif %}
+		<title> Bird Classifier </title>
 	</head>
 	<body>
-		<div><a href='/index'>Home</a><div>
+	<div id='cssmenu'>
+	   <ul>
+		  <li><a href='/'>Home</a></li>
+		  <!--<li><a href='#'>Products</a>
+			 <ul>
+				<li><a href='#'>Product 1</a>
+				   <ul>
+					  <li><a href='#'>Sub Product</a></li>
+					  <li><a href='#'>Sub Product</a></li>
+				   </ul>
+				</li>
+				<li><a href='#'>Product 2</a>
+				   <ul>
+					  <li><a href='#'>Sub Product</a></li>
+					  <li><a href='#'>Sub Product</a></li>
+				   </ul>
+				</li>
+			 </ul>
+		  </li>
+		  <li><a href='#'>About</a></li>
+		  <li><a href='#'>Contact</a></li>-->
+	   </ul>
+	</div>
 		<hr>
 		{% block content %}{% endblock %}
 	</body>

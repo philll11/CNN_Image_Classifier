@@ -3,16 +3,15 @@
 {% block content %}
 <div>
 	<form action "/upload-image" method="POST" enctype="multipart/form-data">
-		<h1>Bear Classifier</h1>
-		<div>This simple web app will take an image of a grizzly bear, black bear, and a teddy bear and classify which family of bear it belongs to.</div><br>
-		<div>
+		<h1>New Zealand Native Bird Classifier</h1>
+		<p>This simple web app takes an image of a common New Zealand native bird and classifies which family it belongs to.</p><br>
+		<p>
 			It uses a Convolutional Neural Network with a Resnet34 layer architechure. 
 			<br>It was only trained on 600 images as it leverages the ImageNet library, allowing for fast, low volume training. 
 			<br>Tho it is a Neural Network, it does not require a GPU to run and therefore runs using the pytorch CPU distribution.
-		</div><br>
+		</p><br>
 		
 		<div id="uploadForm">
-			<div>Upload a bear picture:</div>
 			<div class="form-lements">
 				<div class="fileUpload btn btn-primary">
 					<span>Upload</span>
@@ -22,7 +21,7 @@
 			<div class="form-elements"><img id="upload-image"></div>
 			<div class="form-elements"><p id="image-name"></p></div>
 			<div class="form-elements">
-				<button class="fileUpload btn btn-primary" type="submit">Analyse Image</button>
+				<button id="submit-btn" class="fileUpload btn btn-primary" type="submit" disabled>Analyse Image</button>
 			</div>
 		</div>
 		
