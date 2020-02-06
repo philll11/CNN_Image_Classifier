@@ -2,7 +2,7 @@
 *.pkl
 
 #Java files
-*.jav
+*.jar
 
 # Excel files
 *.xlsx
