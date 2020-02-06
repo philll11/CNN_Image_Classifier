@@ -1,6 +1,9 @@
 # Pre-trained model weights
 *.pkl
 
+#Java files
+*.jav
+
 # Excel files
 *.xlsx
 
