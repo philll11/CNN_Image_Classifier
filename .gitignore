@@ -4,6 +4,9 @@
 # Excel files
 *.xlsx
 
+# PyCharm
+.idea
+
 # Raw Data Files
 **/ticket data
 
