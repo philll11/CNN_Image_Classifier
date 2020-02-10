@@ -8,9 +8,18 @@ Although it is a Neural Network, it does not require a GPU to run and therefore 
 ## Running the webapp
 This app last ran successfully on Python version 3.7.4
 
-To start this app, run the following command:
-`pip install -r stable-req.txt`
+First, create a Python environment:
+
+`py -m venv venv`
 
 Then:
+
+`venv\Scripts\activate`
+
+To gather dependancies, run the below pip command:
+
+`pip install -r stable-req.txt`
+
+To run the Flask app:
 
 `Flask run`
