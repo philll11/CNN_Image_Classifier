@@ -6,20 +6,24 @@ It was only trained on 600 images as it leverages the ImageNet library, allowing
 Although it is a Neural Network, it does not require a GPU to run and therefore runs using the pytorch CPU distribution.
 
 ## Running the webapp
-This app last ran successfully on Python version 3.7.4
+This app last ran successfully on Python version 3.7.4 - new versions of Python maybe not have a wheel support.
 
-First, create a Python environment:
+1. Install Python 3.7
 
-`py -m venv venv`
+2. Create a Python environment:
 
-Then:
+`python -m venv venv`
+
+3. Activate virtual environment
 
 `venv\Scripts\activate`
 
-To gather dependancies, run the below pip command:
+4. Gather dependancies, run the below pip command
 
-`pip install -r stable-req.txt`
+`pip install flask`
+`pip install torch==1.4.0+cpu torchvision==0.5.0+cpu -f https://download.pytorch.org/whl/torch_stable.html`
+`pip install fastai`
 
-To run the Flask app:
+5. Run the Flask app
 
 `Flask run`
