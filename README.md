@@ -21,7 +21,9 @@ This app last ran successfully on Python version 3.7.4 - new versions of Python 
 4. Gather dependancies, run the below pip command
 
 `pip install flask`
+
 `pip install torch==1.4.0+cpu torchvision==0.5.0+cpu -f https://download.pytorch.org/whl/torch_stable.html`
+
 `pip install fastai`
 
 5. Run the Flask app
