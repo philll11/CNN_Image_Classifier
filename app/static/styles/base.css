@@ -30,48 +30,49 @@ hr {
 #cssmenu ul li,
 #cssmenu ul li a,
 #cssmenu #menu-button {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  list-style: none;
-  line-height: 1;
-  display: block;
-  position: relative;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+	text-align: left;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style: none;
+	line-height: 1;
+	display: block;
+	position: relative;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 #cssmenu:after,
 #cssmenu>ul:after {
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0;
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
 }
 #cssmenu #menu-button {
-  display: none;
+	display: none;
 }
 #cssmenu {
-  font-family: Montserrat, sans-serif;
-  background: #333333;
+	font-family: Montserrat, sans-serif;
+	background: #333333;
 }
 #cssmenu>ul>li>a {
-  padding: 17px;
-  font-size: 12px;
-  letter-spacing: 1px;
-  text-decoration: none;
-  color: #dddddd;
-  font-weight: 700;
-  text-transform: uppercase;
-  -webkit-transition: color .25s ease;
-  -moz-transition: color .25s ease;
-  transition: color .25s ease;
+	padding: 17px;
+	font-size: 14px;
+	letter-spacing: 1px;
+	text-decoration: none;
+	color: #dddddd;
+	font-weight: 700;
+	text-transform: uppercase;
+	-webkit-transition: color .25s ease;
+	-moz-transition: color .25s ease;
+	transition: color .25s ease;
 }
 #cssmenu>ul>li:hover>a {
-  color: #ffffff;
+	color: #ffffff;
 }
 #cssmenu>ul>li.has-sub>a {
-  padding-right: 30px;
+	padding-right: 30px;
 }

@@ -1,8 +1,14 @@
 # Pre-trained model weights
 *.pkl
 
+#Java files
+*.jar
+
 # Excel files
 *.xlsx
+
+# PyCharm
+.idea
 
 # Raw Data Files
 **/ticket data
